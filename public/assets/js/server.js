@@ -1,12 +1,21 @@
-var http = require("http");
+// Dependencies
+// =============================================================
+const express = require("express");
+const http = require("http");
 
-var PORTONE = 7000;
+// Sets up the Express App
+// =============================================================
+
+const app = express();
+const PORT = 7000;
+
+const PORTONE = 7000;
 
 function handleRequestOne(request, response) {
     response.end("To err is human, but to really foul things up you need a computer.");
   }
 
-  var server = http.createServer(handleRequestOne);
+  const server = http.createServer(handleRequestOne);
 
   serverOne.listen(PORTONE, function() {
 

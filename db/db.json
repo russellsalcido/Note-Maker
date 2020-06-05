@@ -1,3 +1,5 @@
-[{"title":"Test Title","text":"Test text"}]
-
-module.exports = notesArray;
+[
+    {
+        "title":"Test Title","text":"Test text"
+    }
+]

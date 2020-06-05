@@ -6,6 +6,7 @@ const $newNoteBtn = $(".new-note");
 const $noteList = $(".list-container .list-group");
 
 //NPM
+const express = require("express");
 const uuid = require("uuid");
 const v1options = {
   node: [0x01, 0x23, 0x45, 0x67, 0x89, 0xab],
@@ -17,8 +18,8 @@ const v1options = {
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-import { v1 as uuidv1 } from 'uuid';
-uuidv1(v1options); 
+const { v1: uuidv1 } = require('uuid');
+uuidv4(v1options); // ⇨ '1b9d6bcd-bbfd-4b2d-9b5d-ab8dfbbd4bed'
 
 // activeNote is used to keep track of the note in the textarea
 let activeNote = {};
