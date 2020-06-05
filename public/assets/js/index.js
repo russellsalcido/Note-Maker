@@ -7,6 +7,9 @@ const $noteList = $(".list-container .list-group");
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
+import { v1 as uuidv1 } from 'uuid';
+uuidv1(); // ⇨ '2c5ea4c0-4067-11e9-8bad-9b1deb4d3b7d'
+
 // activeNote is used to keep track of the note in the textarea
 let activeNote = {};
 
