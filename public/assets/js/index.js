@@ -1,25 +1,8 @@
-//MODS
 const $noteTitle = $(".note-title");
 const $noteText = $(".note-textarea");
 const $saveNoteBtn = $(".save-note");
 const $newNoteBtn = $(".new-note");
 const $noteList = $(".list-container .list-group");
-
-//NPM
-const express = require("express");
-const uuid = require("uuid");
-const v1options = {
-  node: [0x01, 0x23, 0x45, 0x67, 0x89, 0xab],
-  clockseq: 0x1234,
-  msecs: new Date('2011-11-01').getTime(),
-  nsecs: 5678,
-};
-
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
-
-const { v1: uuidv1 } = require('uuid');
-uuidv4(v1options); // ⇨ '1b9d6bcd-bbfd-4b2d-9b5d-ab8dfbbd4bed'
 
 // activeNote is used to keep track of the note in the textarea
 let activeNote = {};
