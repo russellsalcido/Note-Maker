@@ -1,25 +1,26 @@
-//NPM
+// Dependencies
+// =============================================================
 const express = require("express");
 
 // Sets up the Express App
 // =============================================================
-
 const app = express();
-var PORTONE = process.env.PORTONE || 8080;
+const apiroutes = require("./routes/apiroutes");
+const htmlroutes = require("./routes/htmlroutes");
 
-// Sets up the Express app to handle data parsing
+const PORT = process.env.PORT || 8080;
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(express.static("public"));
 
-// ================================================================================
-// ROUTER
-// The below points our server to a series of "route" files.
-// These routes give our server a "map" of how to respond when users visit or request data from various URLs.
-// ================================================================================
-require("./public/assets/js/apiRoutes")(app);
-require("./public/assets/js/htmlRoutes")(app);
 
-app.listen(PORTONE, function () {
-	// Callback triggered when server is successfully listening. Hurray!
-	console.log("Server listening on: http://localhost:" + PORTONE);
+// Sets up the Express app to handle data parsing -MID
+app.use("/api", apiroutes);
+app.use("/", htmlroutes);
+
+
+// Starts the server to begin listening
+// =============================================================
+app.listen(PORT, function () {
+  console.log("App listening on PORT " + PORT);
 });
