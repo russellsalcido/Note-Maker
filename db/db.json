@@ -1,1 +1,17 @@
-[]
+[
+  {
+    "title": "Jealous Unicorn",
+    "text": "I envy bulls, deer, and triceratops",
+    "id": "90bb5610-c0c8-11ea-90f8-5d6a111b4c71"
+  },
+  {
+    "title": "Lazy Beaver",
+    "text": "I just don't give a dam",
+    "id": "c96a98e0-c0c8-11ea-90f8-5d6a111b4c71"
+  },
+  {
+    "title": "Gassy Goose",
+    "text": "It makes me fly faster, so stop complaining about the smell.",
+    "id": "c1b33c50-c0c9-11ea-90f8-5d6a111b4c71"
+  }
+]
